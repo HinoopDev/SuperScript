@@ -1,0 +1,8 @@
+§"main_var"=>var|
+§0=>index|
+§§§var-§index=>list|
+?§index!!5'§index&1=>index'>>>§§list|
+$?|
+$§index|
+$§var|
+$§§list|

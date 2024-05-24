@@ -1,0 +1,162 @@
+######################################################################################
+##                                                                                  ##
+##                          SuperScript Interpreter Syntax                          ##
+##                                                                                  ##
+##                                                                                  ##
+##                                                              by Timo Langer      ##
+##                                                                                  ##
+######################################################################################
+
+
+
+
+
+
+--------------------------------------general Syntax
+
+new line : " | "
+
+new line in conditions : " ' "
+
+spaces are not allowed
+
+at the end all conditions have to be ended
+
+at the end all variables and lists have to be destroyed
+
+
+
+------------------------------------------------------------------------------------------------------------------variable handling
+
+------------------------------------------------------------------------assigne
+
+general strucure : " § " value  " => "  variable name
+
+in value can be another variable : " § " other variable name " => " variable name
+
+
+------------------------------------------------------------------------destroyed
+
+general structure : " $§ " variable name
+
+
+------------------------------------------------------------------------add
+
+just two integers or variables with integers assigned
+
+general structure : " § " value 1 " & " value 2 " => " variable name
+
+
+------------------------------------------------------------------------subtract
+
+just two integers or variables with integers assigned
+
+general structure : " § " value 1 " ~ " value 2 " => " variable name
+
+
+------------------------------------------------------------------------multiply
+
+just two integers or variables with integers assignedto use variables just write their name insted of value
+
+general structure : " § " value 1 " @ " value 2 " => " variable name
+
+
+------------------------------------------------------------------------divide
+
+just two integers or variables with integers assigned
+
+to use variables just write their name insted of value
+
+general structure : " § " value 1 " # " value 2 " => " variable name
+
+
+
+------------------------------------------------------------------------------------------------------------------list handling
+
+there can't be lists in lists
+
+
+------------------------------------------------------------------------assigne
+
+general structure : " §§ " value 1 " - " value 2 " => " list name
+
+to put the resulte of a calculation in a list write insted of the value the same as to write calculation
+
+to put variables in a list wirte a " § " before the variable name
+
+
+------------------------------------------------------------------------destroyed
+
+general structure : " $§§ " list name
+
+
+------------------------------------------------------------------------add
+
+general structure : " §§ " list name " & " value
+
+just one item can be added at the same time
+
+to add the resulte of a calculation to a list write insted of the value the same as to write calculation
+
+to add a variable to a list wirte a " § " before the variable name
+
+
+
+------------------------------------------------------------------------subtract
+
+general structure : " §§ " list name " ~ " value
+
+just one item can be subtracted at the same time
+
+to subtract the resulte of a calculation out a list write insted of the value the same as to write calculation
+
+to subtract a variable out a list wirte a " § " before the variable name
+
+
+
+------------------------------------------------------------------------------------------------------------------functions
+
+------------------------------------------------------------------------gives out
+
+general structure : " >>> " text
+
+to give out the resulte of a calculation write insted of the text the same as to write calculation
+
+to give out variables write a " § " before the variable name
+
+to give out lists write a " §§ " fefore the list name
+
+
+------------------------------------------------------------------------conditions
+
+conditions are equal to while loops in python
+
+to get a statement equal to an " if " statement in python, write change the condition parts
+
+new line in a condition : " - "
+
+
+general structure : " ? " condition " - " in the condition " - " in the condition " | " " $? "
+
+
+------------------------------------------condition frame
+
+start condition : " ? "
+end condition   : " $? "
+
+
+------------------------------------------condition
+
+general structure : value 1 " operator " value 2
+
+equal     : " && "
+not equal : " ~~ "
+smaller   : " !! "
+bigger    : " ^^ "
+
+
+------------------------------------------in condition
+
+here is the noraml syntax as outside a condition
+
+no " \n " allowed
